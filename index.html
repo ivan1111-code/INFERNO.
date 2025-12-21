@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Universe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptive.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">inferno.</a>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Главная</a></li>
+                    <li><a href="#about" class="nav-link">Гайды и мета</a></li>
+                    <li><a href="#games" class="nav-link">Новые герои</a></li>
+                    <li><a href="#news" class="nav-link">Новости</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#" class="header-btn">Discord</a>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Экран 1: Главная -->
+    <section class="screen screen1">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="title">inferno.</h1>
+            <p class="subtitle">Актуальные новости, киберспорт, гайды и всё о Dota 2 в одном месте</p>
+            <div class="buttons">
+                <a href="#about" class="btn">Подробнее</a>
+                <a href="#games" class="btn-outline">Игры</a>
+            </div>
+            <div class="scroll-down"></div>
+        </div>
+    </section>
+
+    <!-- Экран 2: О нас -->
+    <section class="screen screen2" id="about">
+        <div class="container">
+            <h2>Тактика и мета</h2>
+            <p class="intro">
+                Погрузись в тактическую глубину Dota 2 с детальными гайдами на героев, актуальными сборками предметов и профессиональной аналитикой мета-игры.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-img" style="background-image: url(https://clan.fastly.steamstatic.com/images//3703047/20246e3ed17e94352b9fdc475c3387d683c9bfe8.png);"></div>
+                    <h3>🏆 Гайды и сборки</h3>
+                    <p>Билды предметов, скилл-билды, контрпики</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-img" style="background-image: url(https://clan.fastly.steamstatic.com/images//3703047/6627033e4c0db6f3f31b0757cacb2dfea0bb0067.png);"></div>
+                    <h3>📊 Статистика и мета</h3>
+                    <p>Винрейты, популярные герои, тир-листы</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-img" style="background-image: url(https://avatars.mds.yandex.net/i?id=c71f7f8fa1b4822ec678237b7f08793bc471d64c-5675611-images-thumbs&n=13);"></div>
+                    <h3>💰 Экономика Dota 2</h3>
+                    <p>Цены на предметы, трейдинг, Dota Plus</p>
+                </div>
+            </div>
+
+            <a href="#games" class="btn">Наши игры</a>
+        </div>
+    </section>
+
+    <!-- Экран 3: Игры -->
+    <section class="screen screen3" id="games">
+        <div class="container">
+            <h2>Новые герои во вселенной Dota 2</h2>
+            <p class="intro">Valve регулярно расширяет ростер Dota 2, добавляя уникальных героев с инновационной механикой.</p>
+            
+            <div class="game-grid">
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url(https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/alchemist.png);"></div>
+                    <h3>Новый герой Alchemist</h3>
+                    <p>синтезирующий дополнительные средства за каждое убийство, с лёгкостью получает необходимое вооружение.</p>
+                    <a href="#" class="btn-secondary">Подробнее</a>
+                </div>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url(https://clan.fastly.steamstatic.com/images//3703047/c09b13cda87a548b83b626fb33a32efd7895c634.png);"></div>
+                    <h3>Представляем нового героя — барда Largo.</h3>
+                    <p>духовным главой ордена бардов-монахов</p>
+                    <a href="#" class="btn-secondary">Подробнее</a>
+                </div>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url(https://clan.fastly.steamstatic.com/images//3703047/98be0d0a60eca8edbad91ec0050918f83ea462e2.png);"></div>
+                    <h3>Встреча вселенных: Dota и Monster Hunter</h3>
+                    <p>Открылся сезон охоты на самых опасных героев в мире, и выследить их предстоит именно вам!</p>
+                    <a href="#" class="btn-secondary">Подробнее</a>
+                </div>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url(https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/phoenix.png);"></div>
+                    <h3>Новый герой Phoenix</h3>
+                    <p>Влетев в битву, Phoenix поражает врагов и излечивает союзников солнечным лучом</p>
+                    <a href="#" class="btn-secondary">Подробнее</a>
+                </div>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url(https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/life_stealer.png);"></div>
+                    <h3>Новый герой Lifestealer</h3>
+                    <p>Если Lifestealer смог близко подобраться к своей жертве, то её уже ничего не спасёт</p>
+                    <a href="#" class="btn-secondary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Экран 4: Новости -->
+    <section class="screen screen4" id="news">
+        <div class="container">
+            <h2>Новости и события</h2>
+            <p class="intro">Будь в курсе главных апдейтов</p>
+
+            <div class="news-grid">
+                <div class="news-item">
+                    <div class="news-img" style="background-image: url(images/DreamLeague.webp);"></div>
+                    <h3>DreamLeague Season 27</h3>
+                    <p>Добавлены новые карты, оружие и баланс персонажей. Испытай всё в Season X!</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-img" style="background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/rubick.png);"></div>
+                    <h3>Icefrog возвращается к разработке!</h3>
+                    <p>Легендарный разработчик Icefrog после 3 лет отсутствия возобновляет активную работу над Dota 2</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-img" style="background-image: url(https://clan.fastly.steamstatic.com/images//3703047/4ba13ce440c2d97294b14560cfcf46a3f1b113be.png);"></div>
+                    <h3>Чемпионы The International 2025</h3>
+                    <p>Поздравляем команду Team Falcons</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-img" style="background-image: url(https://dota2.ru/img/news/slider/t1766319742.webp);"></div>
+                    <h3>Превью CIS Battle 4 — формат турнира, участники, расписание первого игрового дня</h3>
+                    <p>В этом месяце — масштабный киберпраздник в Берлине! Испытай игры в VR-зоне.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Экран 5: Контакты -->
+    <section class="screen screen5" id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p class="intro">Хочешь сотрудничать, участвовать в турнирах или задать вопрос? Напиши нам!</p>
+
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Сообщение"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+
+            <div class="socials">
+                <a href="#">Discord</a>
+                <a href="#">Twitch</a>
+                <a href="#">YouTube</a>
+                <a href="#">Instagram</a>
+            </div>
+
+            <footer>© 2024 inferno universe. Все права защищены.</footer>
+        </div>
+    </section>
+
+</body>
+</html>

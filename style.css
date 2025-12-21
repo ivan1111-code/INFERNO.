@@ -1,0 +1,492 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* HEADER */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 0, 119, 0.2);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff0062, #920000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff0062, #920000);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff0062;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #ff0062;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-btn {
+    background: linear-gradient(90deg, #ff0062, #920000);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.header-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 98, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.main-header.scrolled {
+    padding: 10px 0;
+    background: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+/* /HEADER */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p { 
+    line-height: 1.6; 
+}
+
+.screen {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* ЭКРАН 1 */
+.screen1 {
+    height: 100vh;
+    padding: 0;
+}
+
+.title {
+    font-size: 70px;
+    background: linear-gradient(90deg, #ff0062, #920000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 2s ease-in-out forwards;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-top: 10px;
+    animation: fadeIn 4s ease-in-out forwards;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.btn, .btn-outline {
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    z-index: 3;
+}
+
+.btn {
+    background: linear-gradient(90deg, #ff0077, #5f00ff);
+    color: white;
+}
+
+.btn:hover { 
+    transform: scale(1.1); 
+}
+
+.btn-outline {
+    border: 2px solid #ff0077;
+    color: #ff0077;
+}
+
+.btn-outline:hover {
+    background: #ff0077;
+    color: white;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20%;
+    left: calc(50% - 70px);
+    font-size: 14px;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+}
+
+/* ЭКРАН 2 */
+.screen2 {
+    background: linear-gradient(180deg, #101010, #1d1d1d);
+    z-index: 2;
+}
+
+.about-grid {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.about-item {
+    flex: 1;
+    background: #181818;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.4s;
+    position: relative;
+    z-index: 3;
+}
+
+.about-item:hover {
+    transform: translateY(-10px);
+    background: #222;
+}
+
+.about-img {
+    width: 100%;
+    height: 150px;
+    background: #333;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* ЭКРАН 3 */
+.screen3 {
+    background: url('games-bg.jpg') center/cover fixed;
+    z-index: 3;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.game-card {
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.4s;
+    position: relative;
+    z-index: 4;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+}
+
+.game-img {
+    width: 100%;
+    height: 160px;
+    background: #444;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ff007f;
+    color: #ff007f;
+    transition: 0.3s;
+    position: relative;
+    z-index: 5;
+}
+
+.btn-secondary:hover {
+    background: #ff007f;
+    color: white;
+}
+
+/* ЭКРАН 4 */
+.screen4 {
+    background: linear-gradient(90deg, #111, #1c1c1c);
+    z-index: 4;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.news-item {
+    background: #202020;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 5;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    background: #2b2b2b;
+}
+
+.news-img {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ЭКРАН 5 */
+.screen5 {
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+    z-index: 5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 6;
+}
+
+input, textarea, button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    z-index: 7;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ff0077;
+}
+
+button {
+    background: linear-gradient(90deg, #ff0077, #6100ff);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 119, 0.5);
+}
+
+.socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ff00aa;
+    transition: 0.3s;
+    font-size: 24px;
+    position: relative;
+    z-index: 6;
+}
+
+.socials a:hover { 
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
