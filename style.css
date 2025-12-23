@@ -1,8 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-::selection {
-  background-color: #ff0000; /* Цвет фона выделения */
-  color: white; /* Цвет текста при выделении */
-  text-shadow: none; /* Убираем тень для чистого вида */
+*::selection {
+  background-color: #ff0000;
+  color: white;
+  text-shadow: none;
 }
 /* HEADER */
 .main-header {
@@ -495,3 +495,4 @@ button:hover {
     }
 
 }
+
